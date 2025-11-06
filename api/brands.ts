@@ -4,7 +4,7 @@ export type Brand = { id: number; name: string; logo_url?: string; products_coun
 export type Paginated<T> = { data: T[]; meta: { current_page: number; per_page: number; total: number; last_page: number } };
 
 const normalize = <T,>(raw: any): Paginated<T> => ({
-  data: raw?.data ?? [], // aman walau undefined
+  data: raw?.data ?? [], 
   meta: {
     current_page: Number(raw?.meta?.current_page ?? raw?.current_page ?? 1),
     per_page: Number(raw?.meta?.per_page ?? raw?.per_page ?? 10),

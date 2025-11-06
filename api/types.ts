@@ -4,7 +4,6 @@ export type Brand = {
   logo_url?: string;
   products_count?: number;
 };
-// src/api/types.ts
 export type ProductDetailSpec = Record<string, string>;
 export type ProductDetail = {
   sku: string;

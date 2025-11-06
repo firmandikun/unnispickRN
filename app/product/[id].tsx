@@ -12,7 +12,6 @@ export default function ProductDetailScreen() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
-      {/* Header native dari Stack */}
       <Stack.Screen
         options={{
           title: p?.name ?? "Detail Produk",
@@ -29,14 +28,12 @@ export default function ProductDetailScreen() {
         </View>
       ) : (
         <ScrollView contentContainerStyle={{ paddingBottom: 24 }}>
-          {/* Gambar */}
           <Image
             source={{ uri: p.thumbnail_url }}
             style={{ width: "100%", height: 280, backgroundColor: "#F3F4F6" }}
             resizeMode="cover"
           />
 
-          {/* Info utama */}
           <View style={{ paddingHorizontal: 16, paddingTop: 12 }}>
             {p.brand ? (
               <Text style={{ color: "#6B7280", fontWeight: "600" }}>{p.brand.name}</Text>
@@ -49,14 +46,12 @@ export default function ProductDetailScreen() {
             </Text>
           </View>
 
-          {/* Deskripsi */}
           {p.description ? (
             <View style={{ paddingHorizontal: 16, marginTop: 12 }}>
               <Text style={{ color: "#374151", lineHeight: 20 }}>{p.description}</Text>
             </View>
           ) : null}
 
-          {/* Spesifikasi */}
           {p.detail ? (
             <View style={{ paddingHorizontal: 16, marginTop: 16 }}>
               <Text style={{ fontWeight: "700", color: "#111827", marginBottom: 8 }}>Detail</Text>

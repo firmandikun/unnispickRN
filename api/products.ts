@@ -2,7 +2,6 @@ import { api } from "./client";
 import { Paginated, Product } from "./types";
 
 function normalize<T>(raw: any): Paginated<T> {
-  // Tahan dua format: {data, meta:{...}} ATAU {data, current_page, ...}
   const data = Array.isArray(raw?.data) ? raw.data : Array.isArray(raw) ? raw : [];
   const metaSource = raw?.meta ?? raw ?? {};
 
