@@ -79,7 +79,6 @@ export default function ProductDetailScreen() {
             </View>
           ) : null}
 
-          {/* Tombol aksi */}
           <View style={{ paddingHorizontal: 16, marginTop: 18, gap: 10 }}>
             <Pressable
               onPress={() => console.log("add to cart", p.id)}
